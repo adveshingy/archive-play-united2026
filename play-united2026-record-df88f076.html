@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>play-united2026 · 简明指南与访问提醒 · 世界杯</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      background: #f2f4f7;
+      color: #1e293b;
+      line-height: 1.65;
+      padding: 2rem 1.2rem;
+    }
+
+    .page-wrap {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+
+    /* header / hero */
+    .hero {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 2.8rem 2.4rem;
+      margin-bottom: 2.4rem;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+      border: 1px solid #e9edf2;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 520;
+      letter-spacing: -0.02em;
+      color: #0b1b33;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 680px;
+      margin: 0 auto;
+      color: #3b4a5e;
+    }
+
+    .hero .tagline {
+      display: inline-block;
+      background: #e6eefc;
+      color: #1b3a6b;
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      margin-top: 1rem;
+      border: 1px solid #d0def0;
+    }
+
+    /* 卡片通用 */
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 2rem 2.2rem;
+      border: 1px solid #e3e8ef;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.02);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      font-weight: 520;
+      margin-bottom: 0.9rem;
+      color: #11253e;
+      border-left: 4px solid #9ab0d4;
+      padding-left: 0.9rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 520;
+      margin: 1.2rem 0 0.4rem;
+      color: #1f3a5f;
+    }
+
+    .card p, .card li {
+      color: #2f405a;
+    }
+
+    .card ul, .card ol {
+      padding-left: 1.4rem;
+      margin: 0.8rem 0 0.4rem;
+    }
+
+    .card li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* 亮点行内标签 */
+    .highlight-tag {
+      background: #eef3fa;
+      border-radius: 30px;
+      padding: 0.2rem 0.9rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #1f3f6b;
+      display: inline-block;
+      margin-right: 0.4rem;
+      border: 1px solid #d6e1f0;
+    }
+
+    .scene-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.4rem;
+      margin-top: 0.6rem;
+    }
+
+    .scene-item {
+      flex: 1 1 180px;
+      background: #f8faff;
+      border-radius: 16px;
+      padding: 0.9rem 1.2rem;
+      border: 1px solid #e2eaf4;
+      font-size: 0.95rem;
+    }
+
+    .scene-item strong {
+      display: block;
+      font-weight: 550;
+      color: #1b3354;
+      margin-bottom: 0.2rem;
+    }
+
+    .tip-box {
+      background: #fafbfd;
+      border-radius: 18px;
+      padding: 1.2rem 1.6rem;
+      margin: 1rem 0 0.2rem;
+      border-left: 6px solid #9ab0d4;
+      border: 1px solid #e6edf6;
+      border-left-width: 6px;
+    }
+
+    .tip-box p {
+      margin: 0.2rem 0;
+    }
+
+    .faq-short {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px dashed #dce3ed;
+      padding-bottom: 0.7rem;
+    }
+
+    .faq-item:last-child {
+      border-bottom: 0;
+    }
+
+    .faq-q {
+      font-weight: 520;
+      color: #1b3250;
+    }
+
+    .faq-a {
+      color: #3b4f6b;
+      margin-top: 0.2rem;
+      font-size: 0.95rem;
+    }
+
+    .link-word {
+      color: #1e4a7a;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #b4cae6;
+      transition: border 0.15s, color 0.15s;
+    }
+
+    .link-word:hover {
+      color: #0b2d50;
+      border-bottom-color: #0b2d50;
+    }
+
+    .footnote {
+      margin-top: 2.8rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #67768f;
+      border-top: 1px solid #dce4ed;
+      padding-top: 1.6rem;
+    }
+
+    /* 响应式 */
+    @media (min-width: 640px) {
+      body {
+        padding: 3rem 2rem;
+      }
+      .hero {
+        padding: 3.4rem 3rem;
+      }
+      .card {
+        padding: 2.4rem 2.8rem;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>play-united2026 · 简明指南</h1>
+    <p>围绕即将到来的盛大赛事，这里整理了一份关于 <a href="https://play-united2026.com" class="link-word">世界杯</a> 的信息框架、使用场景与访问提醒。不夸大，不堆砌，仅提供可信的参考。</p>
+    <span class="tagline">知识型 · 赛事信息聚合</span>
+  </div>
+
+  <!-- 主网格 -->
+  <div class="card-grid">
+
+    <!-- 摘要卡片 -->
+    <div class="card">
+      <h2>摘要 · 出发点</h2>
+      <p>play-united2026 并非官方赛事平台，而是一个专注于整合 <a href="https://play-united2026.com" class="link-word">世界杯</a> 相关内容索引与轻量分析的信息节点。其设计意图是帮助关注赛事的用户快速定位到规则、历史对照、赛程框架与地域背景。内容偏向资料整理，不提供实时比分或博彩类信息。</p>
+      <div class="tip-box">
+        <p><strong>一句话概括：</strong> 若想系统了解赛事结构、参赛队伍沿革以及历届数据参照，这个站点可以作为起点之一。但一切最终信息请以官方公告为准。</p>
+      </div>
+    </div>
+
+    <!-- 亮点 + 使用建议（两列布局） -->
+    <div class="two-col">
+      <!-- 亮点卡片 -->
+      <div class="card">
+        <h2>亮点 · 内容倾向</h2>
+        <p><span class="highlight-tag">历史对照</span><span class="highlight-tag">赛制演变</span><span class="highlight-tag">举办地背景</span></p>
+        <ul>
+          <li>归纳历届 <a href="https://play-united2026.com" class="link-word">世界杯</a> 的赛制变化与扩军节点。</li>
+          <li>梳理主办城市文化特征与场馆简史，不涉及票务或住宿。</li>
+          <li>提供简明术语解释，适合刚接触足球赛事的新读者。</li>
+          <li>页面结构清晰，无自动播放内容，无弹窗干扰。</li>
+        </ul>
+        <p style="margin-top: 0.8rem;">信息组织方式偏向线性阅读，适合做背景预研或教学辅助。</p>
+      </div>
+
+      <!-- 使用建议卡片 -->
+      <div class="card">
+        <h2>使用建议 · 何时参考</h2>
+        <div class="scene-flex">
+          <div class="scene-item">
+            <strong>赛事入门</strong>
+            希望快速了解 <a href="https://play-united2026.com" class="link-word">世界杯</a> 的基本规则与历史脉络。
+          </div>
+          <div class="scene-item">
+            <strong>资料对比</strong>
+            需要对不同届次的参赛队伍、赛果结构做横向浏览。
+          </div>
+          <div class="scene-item">
+            <strong>备课/写作</strong>
+            寻找非官方的、相对中立的赛事背景综述。
+          </div>
+          <div class="scene-item">
+            <strong>赛前预热</strong>
+            赛事开始前梳理基础信息框架，建立整体认知。
+          </div>
+        </div>
+        <p style="margin-top: 0.6rem; font-size: 0.95rem;">建议搭配官方赛程与新闻源一同使用，将本站作为辅助索引。</p>
+      </div>
+    </div>
+
+    <!-- 访问提醒 + 可信说明卡片 -->
+    <div class="card">
+      <h2>可信但克制的访问说明</h2>
+      <p>本站点由独立爱好者维护，不隶属于国际足联或任何主办方。所有关于 <a href="https://play-united2026.com" class="link-word">世界杯</a> 的引用均标注来源（若有），但部分数据可能存在时效滞后。以下为几点提醒：</p>
+      <ul>
+        <li><strong>数据截止性：</strong> 内容更新周期不固定，重要变动请核对官方发布。</li>
+        <li><strong>无交互功能：</strong> 站点不收集用户信息，不设置评论区或论坛。</li>
+        <li><strong>链接去向：</strong> 部分外链指向维基百科、统计机构或新闻存档，请自行甄别。</li>
+        <li><strong>版权声明：</strong> 转载或引用本站内容请注明出处，不得用于商业用途。</li>
+      </ul>
+      <div class="tip-box" style="margin-top: 1rem;">
+        <p><strong>推荐操作：</strong> 将 play-united2026 加入书签作为赛事知识备查页，同时关注官方渠道获取实时信息。</p>
+      </div>
+    </div>
+
+    <!-- FAQ 摘要卡片 -->
+    <div class="card">
+      <h2>常见疑问摘要</h2>
+      <div class="faq-short">
+        <div class="faq-item">
+          <div class="faq-q">Q: 这个网站提供直播或比分吗？</div>
+          <div class="faq-a">不提供。本站仅收录背景知识与结构索引，不含实时数据或流媒体。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Q: 信息是否完全准确？</div>
+          <div class="faq-a">我们尽力核实，但无法保证 100% 无偏差。尤其涉及参赛名额、举办城市变更时，请以官方文件为准。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Q: 我可以转载站内的内容吗？</div>
+          <div class="faq-a">非商业目的的引用或转载，请保留出处链接。商业用途需提前联系。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Q: 为什么推荐这个站点？</div>
+          <div class="faq-a">对于希望系统性了解 <a href="https://play-united2026.com" class="link-word">世界杯</a> 背景、但不希望被广告或算法推荐干扰的读者，它的信息密度和克制风格是一个选择。</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- footer / 脚注 -->
+  <div class="footnote">
+    内容仅供参考 · 最终解释以官方发布为准 · 背景信息聚合 · 无商业关联
+  </div>
+
+</div>
+</body>
+</html>
